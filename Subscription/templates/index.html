@@ -1,10 +1,86 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Subscription Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon"
+          type="image/png"
+          href="{% static 'img/favicon.ico' %}"/>
 </head>
 <body>
-    <h1>You're on subscription Page!</h1>
+    {%  include "navbar.html" %}
+    <section class="section is-medium">
+        <h1 class="title">The Daily Outlook</h1>
+        <p class="subtitle">Your daily dose of information and a perfect way to start the day!</p>
+        <div class="columns">
+            <div class="column">
+                <form class="box">
+                  <div class="field">
+                    <label class="label">Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="John">
+                    </div>
+                  </div>
+
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" placeholder="some_mail@example.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="button is-primary">Subscribe</button>
+                </form>
+            </div>
+            <div class="column">
+                <img class="img" src="../static/img/2846317.jpg" alt="tablet with mail inbox and a notification">
+            </div>
+        </div>
+        <!-- TODO:
+        make numbers dynamic (change them to variables)
+        -->
+        <div class="container is-max-widescreen mt-5">
+            <nav class="level">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Sent newsletters</p>
+                  <p class="title">27</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Subscribers</p>
+                  <p class="title">1234</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">This month</p>
+                  <p class="title">+78</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Likes</p>
+                  <p class="title">78927</p>
+                </div>
+              </div>
+            </nav>
+        </div>
+    </section>
+    {% include "footer.html" %}
 </body>
 </html>
