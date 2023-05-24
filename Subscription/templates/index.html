@@ -14,24 +14,29 @@
           href="{% static 'img/favicon.ico' %}"/>
 </head>
 <body>
-    {%  include "navbar.html" %}
+    {% include "navbar.html" %}
     <section class="section is-medium">
-        <h1 class="title">The Daily Outlook</h1>
-        <p class="subtitle">Your daily dose of information and a perfect way to start the day!</p>
         <div class="columns">
             <div class="column">
+                <h1 class="title">The Daily Outlook</h1>
+                <p class="subtitle">Your daily dose of information and a perfect way to start the day</p>
                 <form class="box">
-                  <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                        <input class="input" type="text" placeholder="John">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control has-icons-left">
+                            <input class="input" type="text" placeholder="John">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-user"></i>
+                            </span>
+                        </div>
                     </div>
-                  </div>
-
                     <div class="field">
                         <label class="label">Email</label>
-                        <div class="control">
-                            <input class="input" type="email" placeholder="some_mail@example.com">
+                        <div class="control has-icons-left">
+                            <input class="input" type="email" placeholder="random@example.com">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-envelope"></i>
+                            </span>
                         </div>
                     </div>
                     <div class="field">

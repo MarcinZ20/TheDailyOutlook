@@ -1,5 +1,6 @@
 from django.db import models
 from .User import User
+from django_countries.fields import CountryField
 
 
 class PersonalData(models.Model):
@@ -30,7 +31,7 @@ class PersonalData(models.Model):
     email: models.CharField(max_length=40)
     gender: models.CharField(max_length=6, choices=GENDER)
     city: models.CharField(max_length=40)
-    country: models.CharField(max_length=40)
+    country: CountryField()
 
     def __str__(self):
         return \

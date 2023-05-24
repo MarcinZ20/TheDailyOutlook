@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon"
+          type="image/png"
+          href="{% static 'img/favicon.ico' %}"/>
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div class="container">
+        <h1 class="title">Tell us some more about yourself</h1>
+        <h2 class="subtitle">We'll use it to provide accurate weather forecast for your region</h2>
+        <div class="columns">
+            <div class="column is-half">
+                <form class="box">
+                    <div class="field is-grouped">
+                        <div class="control has-icons-left">
+                            <label class="label">City</label>
+                            <input class="input" type="text" placeholder="ex. Paris">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-city"></i>
+                            </span>
+                        </div>
+                        <div class="control has-icons-left">
+                            <label class="label">Country</label>
+                            <input class="input" type="text" placeholder="ex. France">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-earth-americas"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">How did you hear about us?</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Tell us here ..."></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+</html>
